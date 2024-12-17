@@ -1,0 +1,95 @@
+{
+  "name": "techngs-md-editor",
+  "displayName": "Techngs Model Editor",
+  "description": "Custom Editor",
+  "version": "0.0.1",
+  "publisher": "tchngs",
+  "private": true,
+  "license": "",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./packages/vscode-extension/out/vscode-extension/src/extension.js",
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "techng.model",
+        "displayName": "Techngs model",
+        "selector": [
+          {
+            "filenamePattern": "*.cts"
+          }
+        ]
+      }
+    ],
+    "commands": [
+      {
+        "command": "techng.model.new",
+        "title": "Create a new tchmdv model-view file.",
+        "category": "techng"
+      }
+    ],
+    "files.associations": {
+      "*.mts": "json"
+    },
+    "views": {
+      "explorer": [
+        {
+          "id": "modExp",
+          "name": "Model Explorer"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@types/babel__core": "^7.20.0",
+    "@types/command-exists": "^1.2.0",
+    "@types/js-yaml": "^4.0.5",
+    "@types/node": "^16.18.13",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.10",
+    "@types/vscode": "^1.79.0",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "command-exists": "^1.2.9",
+    "eslint": "latest",
+    "eslint-config-airbnb": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-import-resolver-typescript": "latest",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-jsx-a11y": "latest",
+    "eslint-plugin-prettier": "latest",
+    "eslint-plugin-react": "latest",
+    "jest": "^29.5.0",
+    "ts-node": "^10.9.1",
+    "ts-patch": "^2.1.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.4"
+  },
+  "dependencies": {
+    "@types/vscode": "latest",
+    "neo4j-driver": "latest",
+    "reactflow": "^11.7.2",
+    "ts-evaluator": "^1.1.0",
+    "ts-morph": "^18.0.0",
+    "typia": "^4.0.3",
+    "uuid-int": "^3.1.0",
+    "vscode-uri": "^3.0.7"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile:ext": "cd packages/vscode-extension && npm run compile",
+    "compile:webview": "cd packages/vscode-model-webview && tsc --noEmit && vite build",
+    "compile:all": "npm run compile:ext && npm run compile:webview",
+    "lint": "eslint --ext .ts,.tsx src",
+    "lint:fix": "npm run lint --fix",
+    "prettier": "npx prettier src --check",
+    "prettier:fix": "npm run prettier --write",
+    "watch": "tsc -w -p ./",
+    "test": "jest",
+    "prepare": "ts-patch install"
+  }
+}

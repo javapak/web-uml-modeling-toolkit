@@ -1,0 +1,19 @@
+
+  {
+    "name": "techngs-md-editor",
+    "displayName": "Techngs Model Editor",
+    "description": "Custom Editor",
+    "version": "0.0.1",
+    "publisher": "tchngs",
+    "private": true,
+    "license": "",
+    "engines": {
+      "vscode": "^1.74.0"
+    },
+    "categories": [
+      "Other"
+    ],
+  "scripts": {
+    "compile": "tsc -p ./"
+  }
+}

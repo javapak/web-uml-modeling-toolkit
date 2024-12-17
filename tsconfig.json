@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "commonjs",
+    "target": "es2021",
+    "lib": [
+      "es2021",
+      "DOM"
+    ],
+    "outDir": "out",
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "plugins": [
+      {
+        "transform": "typia/lib/transform"
+      }
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    ".vscode-test",
+    "example-project",
+    "webview"
+  ]
+}

@@ -1,0 +1,253 @@
+/* .App {
+  font-family: sans-serif;
+  text-align: center;
+} */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background-color: var(--vscode-editor-background);
+  font-family: Segoe WPC, Segoe UI, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 0px;
+  margin: 0px;
+  min-height: 100vh;
+}
+
+div.nodeDiv {
+  width: 100px;
+}
+
+body:before,
+body:after {
+  content: '';
+  position: fixed;
+  background: var(--vscode-widget-border);
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+body:before {
+  top: 0;
+}
+
+body:after {
+  bottom: 0;
+}
+
+div.background {
+  background: var();
+}
+
+VSCodePanelView {
+  justify-content: center;
+  align-items: center;
+  max-width: 10%;
+}
+
+.dndflow {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.reactflow-wrapper {
+  flex-grow: 1;
+  height: 100vh;
+}
+
+.dndflow aside {
+  background: var(--vscode-panel-background);
+  font-size: 12px;
+  padding: 15px 10px;
+}
+.right-side-bar {
+  max-width: 250px;
+  width: 20%;
+}
+
+.dndflow .dndnode,
+.dndflow aside .description {
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.dndflow .dndnode {
+  align-items: center;
+  cursor: grab;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+}
+
+.diamond-shape {
+  background: var(--vscode-statusBar-background);
+  height: 60px;
+  text-align: center;
+  transform: rotate(45deg);
+  width: 60px;
+}
+
+.container {
+  margin: auto;
+  text-align: center;
+  width: 940px;
+}
+
+svg text {
+  font-family: Consolas;
+  stroke-width: 0%;
+}
+
+svg text.action {
+  font-family: Consolas;
+  stroke-width: 0%;
+  content: 'Action Node';
+}
+
+svg {
+  stroke-width: 0%;
+}
+
+div.paletteNode {
+  margin: auto;
+}
+
+vscode-panel-view {
+  flex-direction: column;
+}
+
+aside.palette {
+  justify-content: center;
+}
+
+vscode-panels.horizontal {
+  margin: auto;
+}
+
+body {
+  text-align: center;
+  padding-top: 30px;
+}
+
+div.componentMain {
+  background: var(--vscode-statusBar-background);
+}
+
+div.componentTitle {
+  border-radius: 25px;
+  border-color: #1e1e1e;
+  max-height: 20%;
+}
+
+dnode {
+  background: var(--vscode-statusBar-background);
+  mask: 'mask-diamond';
+}
+
+
+
+.paletteParent > * {
+  margin: 10% 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+
+}
+
+.paletteParent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Diamond {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  background-color: var(--vscode-statusBar-background);
+  height: 110px;
+  text-align: center;
+}
+
+.diamond-text {
+  transform:  translate(0, 35px);
+  -ms-transform: translate(0, 35px);
+  -webkit-transform: translate(0, 35px);
+  font-size: smaller;
+
+}
+
+.react-flow__node > p {
+  top: 50%;
+  transform: translateY(25%);
+  text-align: center;
+  font-size: 2
+  
+}
+
+.react-flow__node {
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: all;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+
+.rectangle{
+  width: 120px;
+  height: 88px;
+  text-align: center;
+  background: var(--vscode-statusBar-background);
+}
+
+.Circle {
+  background: var(--vscode-statusBar-background);
+  width: 75px; 
+  height: 75px;
+  border-radius: 50%;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+}
+
+.Double_circle {
+  background: var(--vscode-statusBar-background);
+  width: 70px; 
+  height: 70px;
+  border-radius: 50%;
+  align-items: center; 
+  box-shadow: 0 0 0 5px var(--vscode-statusBar-background);
+  border: 1px solid #fff;
+  align-self: center;
+  text-align: center;
+  
+}
+
+
+.Rounded_rect {
+  background: var(--vscode-statusBar-background);
+  width: 120px; 
+  height: 75px;
+  border-radius: 50%;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+}
+
+
+.content { 
+  position: relative; 
+  z-index: 1; 
+} 
+
